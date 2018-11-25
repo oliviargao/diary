@@ -1,4 +1,4 @@
-class WelcomeController < ApplicationController
+class EntriesController < ApplicationController
   def index
       @websites = [
         ["http://railsgirls.com", "Rails Girls"],
