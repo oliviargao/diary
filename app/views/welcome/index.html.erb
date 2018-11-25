@@ -1,0 +1,29 @@
+<%
+  @websites = [
+    ["http://railsgirls.com", "Rails Girls"],
+    ["https://en.wikibooks.org/wiki/Ruby_Programming","Wikibooks"],
+  ]
+%>
+
+<body>
+    <h1>My Rails Girls Diary</h1>
+    <div>
+      <h2>Day 1 at Rails Girls Istanbul</h2>
+      <p>24.11.2018</p>
+      <p>First, we had introductions and listened to a talk. Then, we downloaded all the relevant programs, such as RVM, Homebrew and Atom.</p>
+      <h2>Day 2 at Rails Girls Istanbul</h2>
+      <p>25.11.2018</p>
+      <p>Today, we are making our web diary.</p>
+    </div>
+    <div>
+    <h1>My Favourite Websites</h1>
+      <ul>
+        <% @websites.each do |website| %>
+          <li><a href="<%= website.first %>"><%= website.second %></a></li>
+        <% end %>
+      </ul>
+    </div>
+    <div>
+      <img src="http://railsgirls.com/images/rg-warsaw.png" />
+    </div>
+</body>
